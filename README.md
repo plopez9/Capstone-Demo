@@ -1,4 +1,17 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# <p align="center" style="padding-top:20px">React Stat Viewer: A Multi-Sport Stats Dashboard </p>
+
+## Project Overview
+
+This repository serves as a practice project showcasing standard software development practices. It demonstrates key concepts such as unit testing, continuous integration, version control, and clean code principles.
+
+This is the frontend portion of a React/Next.js application, built with TypeScript, Tailwind CSS, and Jest for testing. GitHub Actions is used to automate CI/CD workflows. The primary focus of this frontend is to act as the View in the MVC (Model-View-Controller) design pattern, ensuring a structured and maintainable approach to UI development.
+
+## Sports Section Under Development
+
+- Fantasy Football
+- Professional Basketball
+- Professional Baseball
+- Soccer
 
 ## Getting Started
 
@@ -6,17 +19,51 @@ First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Run the project
+
+```sh
+npm run start
+```
+
+### Lint the code
+
+This project uses ESLint for linting JavaScript/TypeScript code, including the project's Jest tests. The linting rules can be found in the `eslint.config.mjs` file. Make sure to run the linter to ensure code quality and adherence to project standards.
+
+> **Note:** The CI/CD pipeline will fail if the code has not been properly linted.
+
+To run the linter locally, use the following command:
+
+```sh
+npm run lint
+```
+
+### Testing
+
+The tests for this project are written using the Jest framework, a popular testing framework for JavaScript, React, and TypeScript. Jest provides a robust set of features for writing unit, integration, and end-to-end tests, including automatic test discovery, mocks, and assertions. It is configured to run the projects unit tests, monitor test coverage and is integrated into the build process to ensure code quality.
+
+> **Note:** The CI/CD pipeline will fail if any unit test fails. No coverage minimum is set for this project.
+
+#### Run tests
+
+```
+npm run test
+```
+
+#### Continuous Testing
+
+```
+npm run test:watch
+```
+
+#### Check test coverage
+
+```sh
+npm run test:coverage
+```
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
