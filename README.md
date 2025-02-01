@@ -13,15 +13,30 @@ This is the frontend portion of a React/Next.js application, built with TypeScri
 - Professional Baseball
 - Soccer
 
+## Installation
+
+To set up the project locally, follow these steps:
+
+1. **Clone the Repository**
+
+   ```
+   git clone git@github.com:plopez9/nextjs-practice-website.git
+   ```
+
+2. **Install Dependencies**
+
+   ```
+   cd react-stat-viewer
+   npm install
+   ```
+
+3. **Run the Development Server**
+   ```
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
 ## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ### Run the project
 
@@ -65,9 +80,29 @@ npm run test:watch
 npm run test:coverage
 ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+#### CI/CD Pipeline
+
+This repository uses GitHub Actions to automate the CI/CD pipeline. The pipeline runs only on push events to the main branch and is not triggered for other branches.
+
+Workflow Overview
+
+1. Checks out Repo
+2. Sets up Node.js (version 21.7) and caches dependencies
+3. Installs dependencies
+4. Builds project
+5. Checks Linting
+6. Runs unit-tests
+
+Passing Criteria
+
+- The pipeline must pass both linting and tests for the workflow to succeed.
+- If any step fails, the workflow stops, and changes will not be merged into main.
+
+To manually trigger the workflow for other branches, consider running it via GitHub Actions → Workflow Dispatch.
 
 ## Learn More
+
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 To learn more about Next.js, take a look at the following resources:
 
