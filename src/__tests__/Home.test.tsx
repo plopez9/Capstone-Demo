@@ -1,8 +1,8 @@
 import { screen, render } from "@testing-library/react";
+import { axe, toHaveNoViolations } from "jest-axe";
 
 import Home from "@/app/page";
 
-const { axe, toHaveNoViolations } = require("jest-axe");
 expect.extend(toHaveNoViolations);
 
 describe("<Home />", () => {
@@ -15,6 +15,6 @@ describe("<Home />", () => {
     const { container } = render(<Home />);
     const results = await axe(container);
 
-    expect(results).toHaveNoViolations;
+    expect(results).toHaveNoViolations();
   });
 });
