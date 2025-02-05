@@ -17,7 +17,7 @@ export default function SideNav() {
 
   return (
     <div>
-      <HamburgerIcon openSideNav={openSideNav} />
+      {!isOpen && <HamburgerIcon openSideNav={openSideNav} />}
       {isOpen && (
         <nav className='fixed top-0 left-0 h-full w-[360px] z-[200] bg-black opacity-90 shadow-[2px_0px_5px_rgba(0,0,0,0.5)]'>
           <button
