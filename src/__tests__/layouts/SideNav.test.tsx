@@ -1,11 +1,12 @@
+import SideNav from "@/app/components/SideNav";
+import { routingLinks } from "@/utils/links";
+
 import { screen, render } from "@testing-library/react";
 import { act } from "react";
 import { MemoryRouterProvider } from "next-router-mock/MemoryRouterProvider";
 import userEvent from "@testing-library/user-event";
 import mockRouter from "next-router-mock";
 import { axe, toHaveNoViolations } from "jest-axe";
-
-import SideNav from "@/app/components/SideNav";
 
 jest.mock("next/router", () => require("next-router-mock"));
 
@@ -33,14 +34,6 @@ describe("<SideNav />", () => {
 
   describe("When SideNav is open", () => {
     let container;
-
-    const routingLinks = [
-      { linkName: "Main Page", href: "/" },
-      { linkName: "NBA Dashboard", href: "/nba-dashboard" },
-      { linkName: "NFL Dashboard", href: "/nfl-dashboard" },
-      { linkName: "MLB Dashboard", href: "/mlb-dashboard" },
-      { linkName: "Soccer Dashboard", href: "/soccer-dashboard" },
-    ];
 
     beforeEach(async () => {
       mockRouter.setCurrentUrl("/");

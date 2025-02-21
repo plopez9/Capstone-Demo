@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 
 import HamburgerIcon from "./HamburgerIcon";
+import { routingLinks } from "../../utils/links";
 
 export default function SideNav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,7 +29,14 @@ export default function SideNav() {
             X
           </button>
           <ul className='m-10 space-y-[15px] text-2xl text-center cursor-pointer'>
-            <li className='hover:text-yellow-500'>
+            {routingLinks.map(({ linkName, href }) => {
+              return (
+                <li key={href} className='hover:text-yellow-500'>
+                  <Link href={href}>{linkName}</Link>
+                </li>
+              );
+            })}
+            {/* <li className='hover:text-yellow-500'>
               <Link href={"/"}>Main Page</Link>
             </li>
             <li className='hover:text-yellow-500'>
@@ -42,7 +50,7 @@ export default function SideNav() {
             </li>
             <li className='hover:text-yellow-500'>
               <Link href={"/soccer-dashboard"}>Soccer Dashboard</Link>
-            </li>
+            </li> */}
           </ul>
         </nav>
       )}
