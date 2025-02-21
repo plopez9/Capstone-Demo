@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 import HamburgerIcon from "./HamburgerIcon";
 
@@ -27,11 +28,21 @@ export default function SideNav() {
             X
           </button>
           <ul className='m-10 space-y-[15px] text-2xl text-center cursor-pointer'>
-            <li className='hover:text-yellow-500'>Main Page</li>
-            <li className='hover:text-yellow-500'>NBA Dashboard</li>
-            <li className='hover:text-yellow-500'>NFL Dashboard</li>
-            <li className='hover:text-yellow-500'>MLB Dashboard</li>
-            <li className='hover:text-yellow-500'>Soccer Dashboard</li>
+            <li className='hover:text-yellow-500'>
+              <Link href={"/"}>Main Page</Link>
+            </li>
+            <li className='hover:text-yellow-500'>
+              <Link href={"/nba-dashboard"}>NBA Dashboard</Link>
+            </li>
+            <li className='hover:text-yellow-500'>
+              <Link href={"/nfl-dashboard"}>NFL Dashboard</Link>
+            </li>
+            <li className='hover:text-yellow-500'>
+              <Link href={"/mlb-dashboard"}>MLB Dashboard</Link>
+            </li>
+            <li className='hover:text-yellow-500'>
+              <Link href={"/soccer-dashboard"}>Soccer Dashboard</Link>
+            </li>
           </ul>
         </nav>
       )}
