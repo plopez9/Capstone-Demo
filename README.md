@@ -77,7 +77,7 @@ npm run test:watch
 #### Check test coverage
 
 ```sh
-npm run coverage
+npm run test:coverage
 ```
 
 ### Accessibility

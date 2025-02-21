@@ -17,4 +17,11 @@ describe("<Home />", () => {
 
     expect(results).toHaveNoViolations();
   });
+
+  test("It should be accessible", async () => {
+    const { container } = render(<Home />);
+    const results = await axe(container);
+
+    expect(results).toHaveNoViolations();
+  });
 });
