@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import HamburgerIcon from "./components/HamburgerIcon";
 import SideNav from "./components/SideNav";
 import "./globals.css";
 
