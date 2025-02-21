@@ -36,21 +36,6 @@ export default function SideNav() {
                 </li>
               );
             })}
-            {/* <li className='hover:text-yellow-500'>
-              <Link href={"/"}>Main Page</Link>
-            </li>
-            <li className='hover:text-yellow-500'>
-              <Link href={"/nba-dashboard"}>NBA Dashboard</Link>
-            </li>
-            <li className='hover:text-yellow-500'>
-              <Link href={"/nfl-dashboard"}>NFL Dashboard</Link>
-            </li>
-            <li className='hover:text-yellow-500'>
-              <Link href={"/mlb-dashboard"}>MLB Dashboard</Link>
-            </li>
-            <li className='hover:text-yellow-500'>
-              <Link href={"/soccer-dashboard"}>Soccer Dashboard</Link>
-            </li> */}
           </ul>
         </nav>
       )}
